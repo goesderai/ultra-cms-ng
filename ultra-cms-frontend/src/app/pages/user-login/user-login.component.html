@@ -1,6 +1,12 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <!--Error message-->
   <div class="alert alert-danger" *ngIf="errorMessage.length > 0">
     <p class="text-center m-0"><i class="fa fa-exclamation-triangle"></i> {{ errorMessage }}</p>
+  </div>
+
+  <!--Success message-->
+  <div class="alert alert-success" *ngIf="successMessage.length > 0">
+    <p class="text-center m-0"><i class="fa fa-info-circle"></i> {{ successMessage }}</p>
   </div>
 
   <div class="mb-3">
